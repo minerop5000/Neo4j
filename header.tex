@@ -1,0 +1,106 @@
+% !TeX root = main.tex
+
+\documentclass[
+    pdftex,
+    oneside,
+    12pt,
+    a4paper,
+    parskip=half,
+    headsepline,
+    footsepline,
+]{scrartcl}
+
+% Used Packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\selectlanguage{english}
+\usepackage{xcolor}
+\usepackage{color}
+\usepackage{acronym}
+\usepackage{csquotes}
+\usepackage{pgffor}
+\usepackage{float}
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{lmodern}
+\usepackage{lastpage}
+\usepackage{pdfpages}
+\usepackage[margin=2.5cm,foot=1cm,top=3cm,bottom=3cm]{geometry}	% Seitenränder und Abstände
+\usepackage[activate]{microtype}
+\usepackage[
+    backend=biber,
+    style=apa,
+    bibwarn=true,
+    bibencoding=utf8,
+    sortlocale=en_US,
+]{biblatex}
+\usepackage{scrlayer-scrpage}
+
+\usepackage{graphicx}
+\usepackage{listings}
+\lstloadlanguages{C,Python,C++,SQL,bash,HTML}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,calc,positioning}
+\usepackage{cases}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{subfig}
+
+\lstset{
+    breaklines=true,
+    breakautoindent=true,
+    showstringspaces=false,
+    captionpos=b,
+    frame=single,
+    basicstyle=\small
+}
+
+% Load Settings
+\input{einstellungen}
+
+% Document Settings
+\title{\titel}
+\author{\authoren}
+\date{\datum}
+
+\usepackage[%
+    pdftitle={\titel},
+    pdfpagemode=UseOutlines, 		% Beim Oeffnen Inhaltsverzeichnis anzeigen
+    pdfdisplaydoctitle=true, 		% Dokumenttitel statt Dateiname anzeigen.
+    pdflang={English}, 			% Sprache des Dokuments.
+]{hyperref}
+
+\usepackage[capitalise]{cleveref}
+
+\definecolor{LinkColor}{HTML}{00007A}
+% (Farb-)einstellungen für die Links im PDF
+\hypersetup{%
+    colorlinks=true,
+    linkcolor=LinkColor,
+    citecolor=LinkColor,
+    filecolor=LinkColor,
+    menucolor=LinkColor,
+    urlcolor=LinkColor,
+    linktoc=all,
+    bookmarksnumbered=true
+}
+
+%Only for the Template
+\usepackage{lipsum}
+
+% Header and Footer
+\ihead{New DB Technologies}
+\ohead{\titel}
+\chead{\datum}
+\ifoot{\hsize=400pt Authors: \authoren}
+\cfoot{}
+\ofoot{\thepage}
+
+% Custom Commands
+\newcommand{\todo}[1]{\textcolor{red}{TODO: #1}\\}
+\newcommand{\tbd}[1]{\textcolor{red}{TBD: #1}\\}
+
+\newcommand{\chapter}[2]{\huge \textbf{#1} \\ \large \textit{#2}\par}
