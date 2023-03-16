@@ -14,6 +14,7 @@ create (p:Professor {name: "Mayer"});
 create (p:Professor {name: "Völlinger"});
 
 // profs
+
 MATCH (a), (b)
 WHERE a.name = 'WebDev' AND b.name = 'Müller'
 CREATE (b)-[r:teaches]->(a);
@@ -31,6 +32,7 @@ WHERE a.name = 'English' AND b.name = 'Völlinger'
 CREATE (b)-[r:teaches]->(a);
 
 // students <> fächer
+
 MATCH (a), (b)
 WHERE a.name = 'Tim' AND b.name = 'WebDev'
 CREATE (a)-[r:enrolled]->(b);
