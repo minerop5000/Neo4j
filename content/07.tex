@@ -2,3 +2,8 @@
 
 \section{CAP Theorem}
 
+Neo4j is a popular graph database that supports the ACID properties of databases, including atomicity, consistency, isolation, and durability. These properties ensure that the database remains consistent and reliable even in the face of unexpected failures or errors (\cite{neo4j:acid}). Neo4j maintains consistency through its built-in consistency checker, which helps to ensure that all nodes are in sync and that data is not lost or corrupted during updates or queries \cite{neo4j:consistency-checker}.
+
+Another major benefit of Neo4j is its high availability, which is achieved through horizontal scaling across a cluster of machines. This allows for seamless failover and replication, ensuring that the database remains up and running even in the event of node failures or other issues. One optional method to achieve horizontal scaling is data sharding, which involves partitioning the data across multiple nodes. However, without data sharding, there is only one partition, which can result in greater partition tolerance, but less availability in the event of a failure of a node or network partition. \cite{book:scaling-neo4j}
+
+The choice of whether to use data sharding or not ultimately depends on the specific needs and priorities of the user. Furthermore, the placement of Neo4j on the CAP theorem can vary depending on the architecture used. 
