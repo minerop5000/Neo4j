@@ -3,11 +3,11 @@
 \section{\tbd{What are Graph based Databases?}}
 Briefly, a graph based database is a combination of edges and vertices which  can be used to represent real world
 objects and their relationships.
-It stores data in form of vertices wich are called nodes and edges wich are called relationships.
+It stores data in form of vertices which are called nodes and edges which are called relationships.
 Nodes and relationships can be connected to each other in a graph.
 The nodes are the objects and the relationships are the connections between the objects.
-Nodes and relationships can habe properties.
-The properties can be used to store metadata about the node or relationship.\cite[P. 6f. ]{PractivalNeo4j}
+Nodes and relationships can have properties.
+The properties can be used to store metadata about the node or relationship \cite[P. 6f. ]{PractivalNeo4j}.
 You can think of a graph based database as a network.
 
 A good example of a real life graph based database is a crime diagram.
@@ -18,8 +18,8 @@ The people are the nodes and the relationships are the connections between the p
 \subsection{\tbd{Nodes}}
 Nodes can be seen as the objects in a graph based database.
 They can be tagged with labels\ref{subsec:labels} to describe their different roles and tasks in the graph model.
-Nodes can also hold an arbitrary number of properties\ref{subsec:tbd{properties}}.
-The following example shows two nodes with the labe \("\)Person\("\), the properties \("\)name\("\), \("\)lastname\("\)
+Nodes can also hold an arbitrary number of properties (see section \ref{subsec:tbd{properties}}).
+The following example shows two nodes with the label \("\)Person\("\), the properties \("\)name\("\), \("\)lastname\("\)
 and \("\)email\("\) and their relationship to each other\cite[compare P. 6f. ]{PractivalNeo4j}.
 %todo: add picture and make the graphmodel.
 \subsection{\tbd{Relationships}}\label{subsec:tbd{relationships}}
@@ -34,14 +34,14 @@ They can hold different types of data like strings, numbers, arrays, booleans, d
 \subsection{\tbd{Labels}} \label{subsec:labels}
 Labels can be seen as a way to group nodes.
 Therefor a node with a specific label can provide additional values for each node.
-For example, if you add a lable called \("\)Person\("\) to a some nodes, they can have the same properties with different values.
-a good example for this is the following graph model.
+For example, if you add a label called \("\)Person\("\) to a some nodes, they can have the same properties with different values.
+A good example for this is the following graph model.
 %todo: add picture
 Labels are often used to show common subsets of essential node types.
-Labels also offers a way to enforce modeling constraints when they are necessary, as well as increasing the speed at wich data
+Labels also offer a way to enforce modeling constraints when they are necessary, as well as increasing the speed at which data
 can be accessed through improved indexing. \cite[compare P. 6f. ]{PractivalNeo4j}
 \subsection{\tbd{Traversal and indexing}}\label{subsec:tbd{traversal-and-indexing}}
-Traversal is a common way of querying a graph in oder to find a specific answer ta a question or more precisely to find a
+Traversal is a common way of querying a graph in order to find a specific answer ta a question or more precisely to find a
 specific node or relationship.
 The traversal is done by visiting nodes and following their relationships according to a set of specified rules\cite[compare P.7 ]{PractivalNeo4j}.
 This can be done in all sorts of algorithms, which can be roughly divided into two categories: breadth-first and depth-first.
