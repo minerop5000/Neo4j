@@ -1,4 +1,7 @@
 \section{Using Neo4j}
+In this chapter we will explain how to install Neo4j in a Docker container and
+how to use it togher with the Neo4j web interface. Afterwards a simple use case
+example will be used to show the possiblities of Neo4j and it's tools.
 
 \subsection{Installation}
 There are a lot of different ways to install Neo4j. Neo4j provides a lot of
@@ -41,8 +44,13 @@ Neo4j. It is our recommendation to use the Docker image for testing and
 development \parencite{neo4j:docker}.
 
 \subsection{Use case example}
-In this section a use case example will be shown. The example describes simple
-the relationship between professors, students, and subjects.
+
+In this section a use case example will be created and analyzed. The example
+will be introduced as a SQL database and then be adapted to Neo4j. This will
+emphasize the differences between traditional relational databases and Neo4j.
+
+The database describes the relationship between professors, students and
+subjects.
 \subsubsection{SQL Tables}
 To get a better understanding of the Neo4j data model SQL tables will be used as
 the basis for the example. The following SQL tables are used:
@@ -117,9 +125,14 @@ Relationships are directly visible and the direction of the relationship is
 clear. The following image \autoref{fig:neo4j-data-model} shows the
 example data in the Neo4j web interface.
 
-\begin{figure}[ht]
+\begin{figure}[!b]
     \centering
-    \includegraphics[width=0.8\textwidth]{images/neo4j-data-model.png}
+    \includegraphics[width=0.5\textwidth]{images/neo4j-data-model.png}
     \caption{Neo4j data model}
     \label{fig:neo4j-data-model}
 \end{figure}
+
+The web interface also allows the graph to be easily rearranged by dragging the
+nodes or edges around. This makes it easy to get a better overview of the graph.
+The direct integration of a Cypher query editor makes it easy to test queries
+and visualize the results without any additional tools.
