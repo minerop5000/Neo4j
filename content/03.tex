@@ -10,25 +10,28 @@ Nodes and relationships can have properties.
 The properties can be used to store metadata about the node or relationship \parencite[P. 6f.]{PractivalNeo4j}.
 You can think of a graph based database as a network.
 
-A good example of a real life graph based database is a crime diagram.
+A good example of a real life graph based database is a crime diagram (example \autoref{fig:crimeDiagram}).
 In a crime diagram you can see the different people and their relationships to each other.
 The people are the nodes and the relationships are the connections between the people. \parencite[compare P. 6f.]{BeginningNeo4j}
-\begin{figure}[h]
+
+\begin{figure}[ht]
     \centering
     \includegraphics[width=1\textwidth]{images/crimediagramm.png}
-    \caption{Crime diagram} \parencite{Neo4j:crimdiagram}
+    \caption{Crime diagram \parencite{Neo4j:crimdiagram}}
     \label{fig:crimeDiagram}
 \end{figure}
+
+\newpage
 \subsection{Nodes}
 Nodes can be seen as the objects in a graph based database.
 They can be tagged with labels (see section \ref{subsec:labels}) to describe their different roles and tasks in the graph model.
 Nodes can also hold an arbitrary number of properties (see section \ref{subsec:properties}).
-The following example shows two nodes with the label \("\)Person\("\), the properties \("\)name\("\), \("\)lastname\("\)
+The following example in \autoref{img:node} shows two nodes with the label \("\)Person\("\), the properties \("\)name\("\), \("\)lastname\("\)
 and \("\)email\("\) and their relationship to each other \parencite[compare P. 6f.]{PractivalNeo4j}.
 \begin{figure}[!h]
     \centering
-    \includegraphics[width=1 \linewidth]{images/node.png}
-    \caption{Node sample} \label{img:cypher}
+    \includegraphics[width=1 \linewidth]{images/nodes.png}
+    \caption{Node sample} \label{img:node}
 \end{figure}
 \subsection{Relationships}\label{subsec:relationships}
 Relationships provide connections between nodes.
@@ -45,7 +48,7 @@ They can hold different types of data like strings, numbers, arrays, booleans, d
 Labels can be seen as a way to group nodes.
 Therefor a node with a specific label can provide additional values for each node.
 For example, if you add a label called \("\)Student\("\) to a some nodes, they can have the same properties with different values.
-A good example for this is the following graph model.
+A good example for this is the following graph model (see \autoref{img:labels}).
 \begin{figure}[!h]
     \centering
     \includegraphics[width=1 \linewidth]{images/labels.png}
